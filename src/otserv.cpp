@@ -23,6 +23,7 @@
 #include <fmt/color.h>
 #include "augments.h"
 #include "zones.h"
+#include "console.h"
 
 #if __has_include("gitmetadata.h")
 	#include "gitmetadata.h"
@@ -244,6 +245,7 @@ int main(int argc, char* argv[])
 		return 0;
 	}
 
+	BlackTek::Console::Initialize();
 	// Setup bad allocation handler
 	std::set_new_handler(badAllocationHandler);
 
