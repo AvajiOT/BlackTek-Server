@@ -267,10 +267,13 @@ int main(int argc, char* argv[])
 	else
 	{
 		Console::printError("No services running. The server is NOT online.");
+
 		g_scheduler.shutdown();
 		g_databaseTasks.shutdown();
 		g_dispatcher.shutdown();
 		g_utility_boss.shutdown();
+
+		BlackTek::Console::Shutdown();
 	}
 
 	g_scheduler.join();
